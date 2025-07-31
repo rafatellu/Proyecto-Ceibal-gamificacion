@@ -6,11 +6,11 @@ function revisarCodigoEtapa1() {
 
     // Se revisa si el código contiene los elementos clave para esta etapa
     if (!codigo.includes("for")) mensaje += "⚠️ Te falta un bucle 'for'.<br>";
-    if (!codigo.includes("range")) mensaje += "⚠️ Usá 'range()'.<br>";
+    if (!codigo.includes("range()")) mensaje += "⚠️ Usá 'range() con el número de veces que repite'.<br>";
     if (!codigo.includes("  print")) mensaje += "⚠️ Falta una impresión con 'print()' o la identación.<br>";
 
     // Si cumple con todos los requisitos, muestra un mensaje de éxito y permite continuar
-    if (codigo.includes("for") && codigo.includes("range") && codigo.includes("  print")) {
+    if (codigo.includes("for") && codigo.includes("range(5)") && codigo.includes("  print")) {
         mensaje = "✅ ¡Correcto! Superaste la primera etapa.";
         document.getElementById("continuar").classList.remove("oculto");
     }
