@@ -42,6 +42,7 @@ function revisarCodigoEtapa2() {
 function revisarCodigoEtapa3() {
     const codigo = document.getElementById("codigo").value;
     let mensaje = "";
+    document.getElementById("volverIndex").classList.add("oculto");
 
     // Revisión específica para esta etapa: conteo descendente con range(10, 0, -1)
     if (!codigo.includes("for")) mensaje += "⚠️ Necesitás un bucle 'for'.<br>";
@@ -53,6 +54,7 @@ function revisarCodigoEtapa3() {
         mensaje = "✅ ¡Has vencido al Guardián!";
         document.getElementById("continuar").classList.remove("oculto");
         document.getElementById("volverAnterior").classList.add("oculto");
+        document.getElementById("volverIndex").classList.remove("oculto");
     }
 
     document.getElementById("mensajeRevision").innerHTML = mensaje;
