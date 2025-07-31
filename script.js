@@ -61,7 +61,7 @@ function revisarCodigoEtapa3() {
     
 }
 
-// Ocultar el botón "volverIndex" al cargar la página
+// Ocultar el botón "Reiniciar" al cargar la 3era misión.
 window.onload = () => {
     document.getElementById("volverIndex").classList.add("oculto");
 };
