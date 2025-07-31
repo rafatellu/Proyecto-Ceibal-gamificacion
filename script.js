@@ -33,6 +33,7 @@ function revisarCodigoEtapa2() {
     if (codigo.includes("for") && codigo.includes("range(1, 11)") && codigo.includes("  print")) {
         mensaje = "✅ ¡Bien! La segunda puerta se ha abierto.";
         document.getElementById("continuar").classList.remove("oculto");
+        document.getElementById("volverIndex").classList.add("oculto");
     }
 
     document.getElementById("mensajeRevision").innerHTML = mensaje;
@@ -42,7 +43,7 @@ function revisarCodigoEtapa2() {
 function revisarCodigoEtapa3() {
     const codigo = document.getElementById("codigo").value;
     let mensaje = "";
-    document.getElementById("volverIndex").classList.add("oculto");
+    
 
     // Revisión específica para esta etapa: conteo descendente con range(10, 0, -1)
     if (!codigo.includes("for")) mensaje += "⚠️ Necesitás un bucle 'for'.<br>";
