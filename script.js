@@ -52,8 +52,9 @@ function revisarCodigoEtapa3() {
     if (codigo.includes("for") && codigo.includes("range(10, 0, -1)") && codigo.includes("  print")) {
         mensaje = "✅ ¡Has vencido al Guardián!";
         document.getElementById("continuar").classList.remove("oculto");
+        document.getElementById("volverAnterior").classList.add("oculto");
     }
 
     document.getElementById("mensajeRevision").innerHTML = mensaje;
-    document.getElementById("reinicio").classList.add("oculto");
+    
 }
