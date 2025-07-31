@@ -51,7 +51,7 @@ function revisarCodigoEtapa3() {
     // Si el código cumple todos los requisitos, se permite avanzar
     if (codigo.includes("for") && codigo.includes("range(10, 0, -1)") && codigo.includes("  print")) {
         mensaje = "✅ ¡Has vencido al Guardián!";
-        document.getElementById("continuar").classList.remove("oculto");
+        document.getElementById("continuar").classList.add("oculto");
     }
 
     document.getElementById("mensajeRevision").innerHTML = mensaje;
