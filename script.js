@@ -33,7 +33,6 @@ function revisarCodigoEtapa2() {
     if (codigo.includes("for") && codigo.includes("range(1, 11)") && codigo.includes("  print")) {
         mensaje = "✅ ¡Bien! La segunda puerta se ha abierto.";
         document.getElementById("continuar").classList.remove("oculto");
-        document.getElementById("volverIndex").classList.add("oculto");
     }
 
     document.getElementById("mensajeRevision").innerHTML = mensaje;
@@ -61,3 +60,8 @@ function revisarCodigoEtapa3() {
     document.getElementById("mensajeRevision").innerHTML = mensaje;
     
 }
+
+// Ocultar el botón "volverIndex" al cargar la página
+window.onload = () => {
+    document.getElementById("volverIndex").classList.add("oculto");
+};
